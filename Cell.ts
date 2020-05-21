@@ -1,7 +1,11 @@
 export class Cell {
-  constructor() {}
+  constructor(private state: boolean = true) {}
 
   isAlive(): boolean {
-    return true;
+    return this.state;
+  }
+
+  setState(state: boolean): void {
+    this.state = state;
   }
 }

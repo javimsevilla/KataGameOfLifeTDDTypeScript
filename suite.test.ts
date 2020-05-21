@@ -25,8 +25,7 @@ describe('GameOfLife Testing', () => {
     let expected = false;
     let cell = new Cell();
     let game = new GameOfLife();
-
-    game.getNextState(cell.getState(), NUMBER_OF_NEIGHBORS);
+    cell.setState(game.getNextState(cell.isAlive(), NUMBER_OF_NEIGHBORS));
     let result = cell.isAlive();
 
     expect(result).toBe(expected);
