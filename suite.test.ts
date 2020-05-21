@@ -57,4 +57,19 @@ describe('GameOfLife Testing', () => {
     // Afirma
     expect(result).toBe(expected);
   });
+
+  test('La celula se mantiene viva con 3 celulas vecinas vivas', function () {
+    // Prepara
+    const NUMBER_OF_NEIGHBORS = 3;
+    let expected = true;
+    let cell = new Cell();
+    let game = new GameOfLife();
+
+    // Actua
+    cell.setState(game.getNextState(cell.isAlive(), NUMBER_OF_NEIGHBORS));
+    let result = cell.isAlive();
+
+    // Afirma
+    expect(result).toBe(expected);
+  });
 });
