@@ -6,4 +6,9 @@ describe('GameOfLife Testing', () => {
     var result = true;
     expect(result).toBe(expected);
   });
+
+  test('Puede crear una celula', function () {
+    var result = new Cell();
+    expect(result).toBeDefined();
+  });
 });
