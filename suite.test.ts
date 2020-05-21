@@ -72,4 +72,20 @@ describe('GameOfLife Testing', () => {
     // Afirma
     expect(result).toBe(expected);
   });
+
+  // ¿DEBERÍA FALLAR? ¿ES UN TEST INNECESARIO? 🤔💭
+  test('La celula muere con más de 3 celulas vecinas vivas', function () {
+    // Prepara
+    const NUMBER_OF_NEIGHBORS = 4;
+    let expected = false;
+    let cell = new Cell();
+    let game = new GameOfLife();
+
+    // Actua
+    cell.setState(game.getNextState(cell.isAlive(), NUMBER_OF_NEIGHBORS));
+    let result = cell.isAlive();
+
+    // Afirma
+    expect(result).toBe(expected);
+  });
 });
