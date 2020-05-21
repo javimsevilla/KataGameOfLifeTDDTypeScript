@@ -19,4 +19,16 @@ describe('GameOfLife Testing', () => {
     var result = cell.isAlive();
     expect(result).toBe(expected);
   });
+
+  test('La celula muere cuando tiene menos de 2 celulas vecinas', function () {
+    const NUMBER_OF_NEIGHBORS = 1;
+    let expected = false;
+    let cell = new Cell();
+    let game = new GameOfLife();
+
+    game.getNextState(cell.getState(), NUMBER_OF_NEIGHBORS);
+    let result = cell.isAlive();
+
+    expect(result).toBe(expected);
+  });
 });
