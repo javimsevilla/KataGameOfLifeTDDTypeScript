@@ -12,4 +12,11 @@ describe('GameOfLife Testing', () => {
     var result = new Cell();
     expect(result).toBeDefined();
   });
+
+  test('La celula está viva cuando se crea', function () {
+    var expected = true;
+    var cell = new Cell();
+    var result = cell.isAlive();
+    expect(result).toBe(expected);
+  });
 });
