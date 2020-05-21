@@ -20,7 +20,7 @@ describe('GameOfLife Testing', () => {
     expect(result).toBe(expected);
   });
 
-  test('La celula muere cuando tiene menos de 2 celulas vecinas', function () {
+  test('La celula muere cuando tiene menos de 2 celulas vecinas vivas', function () {
     const NUMBER_OF_NEIGHBORS = 1;
     let expected = false;
     let cell = new Cell();
