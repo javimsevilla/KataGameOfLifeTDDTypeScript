@@ -1,4 +1,5 @@
 import { GameOfLife } from './GameOfLife';
+import { Cell } from './Cell';
 
 describe('GameOfLife Testing', () => {
   test('La suite de test funciona correctamente', function () {
